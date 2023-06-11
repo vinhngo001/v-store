@@ -9,7 +9,8 @@
 		"dev:cp": "tsc && yarn copy:assets && nodemon dist/server.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"copy:assets": "mkdir dist/public && cp public/* dist/public/",
-		"start:debug": "node --inspect=8888 --inspect-brk ts-node --ignore false index.ts"
+		"start:debug": "node --inspect=8888 --inspect-brk ts-node --ignore false index.ts",
+		"start:dev": "nodemon index.js"
 	},
 	"license": "MIT",
 	"dependencies": {
