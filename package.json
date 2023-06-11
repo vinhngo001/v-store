@@ -1,0 +1,27 @@
+{
+	"name": "store-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/app.js",
+	"scripts": {
+		"start": "tsc && yarn copy:assets && node dist/server.js",
+		"dev": "tsc && nodemon dist/server.js",
+		"dev:cp": "tsc && yarn copy:assets && nodemon dist/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"copy:assets": "mkdir dist/public && cp public/* dist/public/",
+		"start:debug": "node --inspect=8888 --inspect-brk ts-node --ignore false index.ts"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"helmet": "^4.5.0",
+		"morgan": "^1.10.0",
+		"ts-node": "^9.1.1"
+	},
+	"devDependencies": {
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.1.3"
+	}
+}
